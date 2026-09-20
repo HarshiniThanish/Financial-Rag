@@ -1,0 +1,9 @@
+spring:
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
+      chat.options.model: gpt-4o-mini
+      chat.options.temperature: 0.0
+  servlet.multipart.max-file-size: 20MB
+finrag:
+  review-threshold: 0.75
