@@ -1,11 +1,7 @@
 package com.example.finrag;
 
-import org.springframework.ai.embedding.EmbeddingModel;
-import org.springframework.ai.vectorstore.SimpleVectorStore;
-import org.springframework.ai.vectorstore.VectorStore;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public class FinancialRagApplication {
@@ -13,8 +9,8 @@ public class FinancialRagApplication {
         SpringApplication.run(FinancialRagApplication.class, args);
     }
 
-    @Bean
-    VectorStore vectorStore(EmbeddingModel embeddingModel) {
-        return SimpleVectorStore.builder(embeddingModel).build(); // in-memory; swap for pgvector in prod
-    }
+    // @Bean
+    // VectorStore vectorStore(EmbeddingModel embeddingModel) {
+    //     return SimpleVectorStore.builder(embeddingModel).build(); // in-memory; swap for pgvector in prod
+    // }
 }
